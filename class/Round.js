@@ -1,4 +1,4 @@
-import { Question } from "./Question";
+import { Question } from "./Question.js";
 
 class Round{
     /**Pregunta seleccionada al azar dentro de la categoria.

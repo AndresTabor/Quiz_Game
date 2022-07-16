@@ -14,14 +14,14 @@ export const showNavbar = (container, level, score) => {
 
     const $textRound = document.createElement("span");
     $textRound.innerText = `Ronda: ${level}`;
-    $textRound.appendChild($textRound);
+    $roundInfo.append($textRound);
 
     const $scoreInfo = document.createElement("div");
     $scoreInfo.classList.add("score-info");
 
     const $textScore = document.createElement("span");
     $textRound.innerText = `Score: ${score}`;
-    $textScore.appendChild($scoreInfo);
+    $scoreInfo.append($textScore);
 
     const $logo = document.createElement("div");
     $logo.classList.add("logo-tributo");
