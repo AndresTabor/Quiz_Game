@@ -1,5 +1,5 @@
 /**
- * 
+ * Crea una barra de navegacion en el DOM.
  * @param {Object} container Contenedor pirncipal.
  * @param {Number} level Nivel actual a mostrar en pantalla.
  * @param {Number} score Puntaje acumulado del jugador.

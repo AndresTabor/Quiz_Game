@@ -27,10 +27,12 @@ class Player {
     }
     /**
      * Funcion que aumenta el puntaje del jugador.
-     * @param {Number} newPuntaje el nuevo puntaje a acumular.
+     * 
+     * @return {Number} Retorna el puntaje del jugador.
      */
-    addScore(newPuntaje){
-       this.#score += newPuntaje; 
+    addScore(){
+       this.#score += 100;
+       return this.#score; 
     }
     /**
      * Función que actualiza los intentos del jugador a cero.
@@ -38,22 +40,17 @@ class Player {
     defeat(){
         this.#attempts -= 1;
         this.#score = 0;
-        return this.#getDataPlayer();
+        return this.getDataPlayer();
     }
     /**
      * Función que accede a los datos del jugador.
      * @returns {Array}Nombre y puntaje acumulado del jugador.
      */
-    // @ts-ignore
-    #getDataPlayer(){
+    
+    getDataPlayer(){
         return [this.#name, this.#score];
     }
-    /**
-     * Función que retira al jugador y de el juego.
-    */
-    withdraw(){
-        return this.#getDataPlayer();        
-    }
+    
 }
 
 export { Player };
