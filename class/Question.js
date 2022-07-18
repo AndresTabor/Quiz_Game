@@ -15,6 +15,7 @@ class Question{
      * @type {Number} */
     // @ts-ignore
     #level;
+
     /**
      * Funcion contructura de la pregunta. 
      * @param {String} question Pregunta a realizar.
@@ -37,8 +38,13 @@ class Question{
     validateAnswer(option) {
         return option === this.#correctAnswer;
     }
-    
-    
+    /**
+     * Funcion para optener atributos de la clase.
+     * @returns {Object} Arreglo con la pregunta y las opciones de respuesta.
+     */
+    getQuestionData(){         
+        return {"question": this.#question, "options":this.#options};
+    }
     
 }
 export { Question };

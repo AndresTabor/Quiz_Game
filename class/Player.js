@@ -42,7 +42,7 @@ class Player {
     }
     /**
      * Función que accede a los datos del jugador.
-     * @returns Nombre y puntaje acumulado del jugador.
+     * @returns {Array}Nombre y puntaje acumulado del jugador.
      */
     // @ts-ignore
     #getDataPlayer(){
