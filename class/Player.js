@@ -52,7 +52,7 @@ class Player {
      * Función que retira al jugador y de el juego.
     */
     withdraw(){
-        this.#getDataPlayer();
+        return this.#getDataPlayer();        
     }
 }
 

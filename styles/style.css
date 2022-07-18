@@ -49,6 +49,14 @@ code {
   color: rgb(219, 130, 21);
 }
 
+.score-title::before{
+  content: "Score: ";
+}
+
+.nivel-title::before{
+  content: "Nivel: ";
+}
+
 .trivia-container{
   padding: 3rem;
   background-color: aliceblue;

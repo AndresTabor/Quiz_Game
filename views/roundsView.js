@@ -1,6 +1,10 @@
-
-
-export const showRoundComponent = (container, selet, backingOut) => {
+import { backingOut } from '../js/gameController.js';
+/**
+ * Funcion para componente de pregunta en el DOM.
+ * @param {Object} container Contenedor principal del DOM.
+ *
+ */
+export const showRoundComponent = (container, selectChoice) => {
     const $triviaContainer = document.createElement("main");
     
     const $questionContainer = document.createElement("div");
@@ -16,22 +20,22 @@ export const showRoundComponent = (container, selet, backingOut) => {
     const $optionBtn1 = document.createElement("button");
     $optionBtn1.classList.add("btn-options");
     $optionBtn1.id = "btn-options1";
-    $optionBtn1.addEventListener("click", selet);
+    $optionBtn1.addEventListener("click", () => selectChoice(0));
 
     const $optionBtn2 = document.createElement("button");
     $optionBtn2.classList.add("btn-options");
     $optionBtn2.id = "btn-options2";
-    $optionBtn2.addEventListener("click", selet);
+    $optionBtn2.addEventListener("click", () => selectChoice(1));
 
     const $optionBtn3 = document.createElement("button");
     $optionBtn3.classList.add("btn-options");
     $optionBtn3.id = "btn-options3";
-    $optionBtn3.addEventListener("click", selet);
+    $optionBtn3.addEventListener("click", () => selectChoice(2));
 
     const $optionBtn4 = document.createElement("button");
     $optionBtn4.classList.add("btn-options");
     $optionBtn4.id = "btn-options4";
-    $optionBtn4.addEventListener("click", selet);
+    $optionBtn4.addEventListener("click", () => selectChoice(3));
     
     $optionsContainer.append($optionBtn1, $optionBtn2, $optionBtn3, $optionBtn4);
     

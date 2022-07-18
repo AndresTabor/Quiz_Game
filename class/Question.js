@@ -8,7 +8,7 @@ class Question{
     // @ts-ignore
     #options;
     /**respuesta correcta. 
-     * @type {String} */
+     * @type {Number} */
     // @ts-ignore
     #correctAnswer;
     /**Nivel de dificultad de la pregunta. 
@@ -19,7 +19,7 @@ class Question{
      * Funcion contructura de la pregunta. 
      * @param {String} question Pregunta a realizar.
      * @param {String[]} options Opciones posibles para responder. 
-     * @param {String} correctAnswer 
+     * @param {Number} correctAnswer 
      * @param {Number} level 
      */
     constructor(question, options, correctAnswer, level) {
@@ -31,11 +31,14 @@ class Question{
 
     /**
      * Funcion para validar la respuesta seleccionada.
-     * @param {String} option Opcion seleccionada por el jugador.
+     * @param {Number} option Opcion seleccionada por el jugador.
      * @returns {boolean} True si la opcion es correcta, de lo contrario retorna false.
      */
     validateAnswer(option) {
         return option === this.#correctAnswer;
     }
+    
+    
+    
 }
 export { Question };
